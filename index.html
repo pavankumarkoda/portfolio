@@ -1,0 +1,801 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title> my portfolio  </title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="Free HTML Templates" name="keywords">
+    <meta content="Free HTML Templates" name="description">
+
+    <!-- Favicon -->
+    <link href="images/IMG_20241116_164408.jpg" rel="icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet"> 
+
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+    <style>
+      /* Set up the basic page style */
+      body {
+    font-family: 'Roboto', sans-serif; /* Apply Roboto font */
+    margin: 0;
+    padding: 0;
+    font-weight: 110; /* Thin weight */
+}
+
+
+/* Content style */
+.content {
+    padding: 20px;
+}
+
+/* Floating icons container */
+.floating-icons {
+    position: fixed;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    z-index: 10; /* Ensure icons are above the page content */
+}
+
+/* Style for each icon */
+.icon img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Hover effect to enlarge the icons */
+.icon:hover img {
+    transform: scale(1.1);
+}
+
+/* Optional: Style for links (no text decoration) */
+.icon {
+    display: inline-block;
+    text-decoration: none;
+}
+.content {
+    padding: 20px;
+    width: 100%; /* Optional: Adjust content width */
+    margin: 0 auto; /* Center the content on the page */
+}
+
+/* Justify the paragraph text */
+p {
+    text-align: justify; /* Align text to both left and right */
+}
+@media (max-width: 768px) {
+    .social-icon {
+        font-size: 25px;
+    }
+}
+
+@media (max-width: 480px) {
+    .social-icon {
+        font-size: 20px;
+    }
+}
+    </style>
+</head>
+
+<body data-spy="scroll" data-target=".navbar" data-offset="51" style="font-family: roboto; font-size: 1;">
+    <!-- Navbar Start -->
+    <nav class="navbar fixed-top shadow-sm navbar-expand-lg bg-light navbar-light py-3 py-lg-0 px-lg-5">
+        <a href="index.html" class="navbar-brand ml-lg-3">
+            <h1 class="m-0 display-5"><span class="text-primary"></span>KODA</h1>
+        </a>
+        <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse px-lg-3" id="navbarCollapse">
+            <div class="navbar-nav m-auto py-0">
+                <a href="#home" class="nav-item nav-link active">Home</a>
+                <a href="#about" class="nav-item nav-link">About</a>
+                <a href="#qualification" class="nav-item nav-link">Quality</a>
+                <a href="#skill" class="nav-item nav-link">Skill</a>
+                <a href="#service" class="nav-item nav-link">Service</a>
+                <a href="#portfolio" class="nav-item nav-link">Projects</a>
+                <a href="#contact" class="nav-item nav-link">Contact</a>
+            </div>
+          
+            <a href="mailto:pavankumarkoda007@gmail.com" class="btn btn-outline-primary d-none d-lg-block">Hire Me</a>
+        </div>
+        
+    </nav>
+
+
+
+    
+    <!-- Navbar End -->
+
+    <div class="floating-icons">
+        <a href="https://www.linkedin.com/pavankoda" target="_blank" class="icon">
+            <img src="images/linkedin.png" alt="LinkedIn" />
+        </a>
+        <a href="https://github.com/pavankumarkoda" target="_blank" class="icon">
+            <img src="images/image copy 2.png" alt="GitHub" />
+        </a>
+        <a href="https://leetcode.com/pavankoda" target="_blank" class="icon">
+            <img src="images/leet.png" alt="LeetCode" />
+        </a>
+        <a href="https://www.naukri.com/code360/profile/pavankoda" target="_blank" class="icon">
+            <img src="images/coding.png" alt="Coding Ninjas" />
+        </a>
+    </div>
+    <!-- Video Modal Start -->
+    <div class="modal fade" id="videoModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>        
+                    <!-- 16:9 aspect ratio -->
+                    <div class="embed-responsive embed-responsive-16by9">
+                        <iframe class="embed-responsive-item" src="" id="video"  allowscriptaccess="always" allow="autoplay"></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Video Modal End -->
+
+
+    <!-- Header Start -->
+    <div class="container-fluid bg-primary d-flex align-items-center mb-5 py-5" id="home" style="min-height: 100vh;">
+        <div class="container" style="background-color: black;">
+            <div class="row align-items-center">
+                <div class="col-lg-5 px-5 pl-lg-0 pb-5 pb-lg-0">
+                    <img class="img-fluid w-100 rounded-circle shadow-sm" src="images/IMG_20241116_164408.jpg" alt="">
+                </div>
+                <div class="col-lg-7 text-center text-lg-left">
+                    <!-- <h3 class="text-white font-weight-normal mb-3">I'm</h3> -->
+                    <h1 class="display-3 text-uppercase text-primary mb-2" style="-webkit-text-stroke: 2px #ffffff;">Pavan Kumar Koda</h1>
+                    <h1 class="typed-text-output d-inline font-weight-lighter text-white"></h1>
+                    <div class="typed-text d-none">Full Stack Developer</div>
+                    <div class="d-flex align-items-center justify-content-center justify-content-lg-start pt-5">
+                        <a  href="https://drive.google.com/drive/folders/1RmJBZxFVEtjAuwRghQzHyJRZKkMQiXK5?usp=sharing" target="_blank" class="btn btn-outline-light mr-5">Download CV</a>
+                        <!-- <button type="button" class="btn-play" data-toggle="modal"
+                            data-src="https://www.youtube.com/embed/DWRcNpR6Kdc" data-target="#videoModal">
+                            <span></span>
+                        </button> -->
+                        <!-- <h5 class="font-weight-normal text-white m-0 ml-4 d-none d-sm-block">Play Video</h5> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Header End -->
+
+
+    <!-- About Start -->
+    <div class="container-fluid py-5" id="about">
+        <div class="container-fluid py-5" id="about">
+            <div class="container">
+                <div class="position-relative d-flex align-items-center justify-content-center">
+                    <h1 class="display-1 text-uppercase text-white" style="-webkit-text-stroke: 1px #dee2e6;">About</h1>
+                    <h1 class="position-absolute text-uppercase text-primary">About Me</h1>
+                </div>
+                <div class="row align-items-center">
+                    <div class="col-lg-5 pb-4 pb-lg-0">
+                        <img class="img-fluid rounded w-100" src="images/IMG_20241116_163601.jpg" alt="Pavan Kumar Koda">
+                    </div>
+                    <div class="col-lg-7">
+                        <h2 class="mb-4">Hi, I'm Pavan Kumar Koda</h2>
+                       
+                            <p>
+                                I’m a passionate Full Stack Developer with expertise in both front-end and back-end technologies. I can work with a wide range of programming languages and frameworks, including Java, JavaScript, PHP, VB.NET, and more. Whether it’s building responsive user interfaces or creating robust server-side solutions, I thrive in delivering seamless, full-stack applications.
+                                
+                                My experience spans multiple web technologies like ReactJS, Spring Boot, Bootstrap, and I am well-versed in databases like MySQL and Oracle SQL. I am also proficient in MVVM architecture with VB.NET for developing scalable and maintainable applications. Additionally, I have hands-on experience working with cloud technologies such as AWS Lambda, S3, and IAM Roles, making me well-equipped to develop cloud-based solutions.
+                                
+                                I am passionate about solving complex problems and continuously improving my skills to stay up-to-date with the latest advancements in software development. My goal is to help businesses and clients build powerful, scalable, and user-friendly applications that meet their needs and exceed expectations.
+                            </p>
+                        
+                        <div class="row mb-3">
+                            <div class="col-sm-6 py-2"><h6>Name: <span class="text-secondary">Pavan Kumar Koda</span></h6></div>
+                            <div class="col-sm-6 py-2"><h6>DOB: <span class="text-secondary">01 Sep 2000</span></h6></div>
+                            <div class="col-sm-6 py-2"><h6>Degree: <span class="text-secondary">Bachelor of Technology</span></h6></div>
+                            <div class="col-sm-6 py-2"><h6>Experience: <span class="text-secondary">Fresher / Junior Developer</span></h6></div>
+                            <div class="col-sm-6 py-2"><h6>Phone: <span class="text-secondary">+91 9704147418</span></h6></div>
+                            <div class="col-sm-6 py-2"><h6>Email: <span class="text-secondary">pavankumarkoda007@gmail.com</span></h6></div>
+                            <div class="col-sm-6 py-2"><h6>Address: <span class="text-secondary">Raju Colony, Balanagar, 500042</span></h6></div>
+                            <div class="col-sm-6 py-2"><h6>Freelance: <span class="text-secondary">Available</span></h6></div>
+                        </div>
+                        <a href="mailto:pavankumarkoda007@gmail.com" class="btn btn-outline-primary mr-4">Hire Me</a>
+                        <a href="#portfolio" class="btn btn-outline-primary">Learn More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        
+    </div>
+    
+    
+    <!-- About End -->
+
+
+    <!-- Qualification Start -->
+    <div class="container-fluid py-5" id="qualification">
+        <div class="container">
+            <div class="position-relative d-flex align-items-center justify-content-center">
+                <h1 class="display-1 text-uppercase text-white" style="-webkit-text-stroke: 1px #dee2e6;">Quality</h1>
+                <h1 class="position-absolute text-uppercase text-primary">Education & Expericence</h1>
+            </div>
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <h3 class="mb-4">My Education</h3>
+                    <div class="border-left border-primary pt-2 pl-4 ml-2">
+                        <div class="position-relative mb-4">
+                            <i class="far fa-dot-circle text-primary position-absolute" style="top: 2px; left: -32px;"></i>
+                            <h5 class="font-weight-bold mb-1">Bachelor of Technology</h5>
+                            <p class="mb-2"><strong>Jawaharlal Nehru Technological University, Hyderabad</strong> | <small>2020-2023</small></p>
+                            <p>Graduate from Malla Reddy Engineering College and Management Sciences, Medchal with a Bachelor of Technology in Mechanical Engineering.</p>
+                        </div>
+                        <div class="position-relative mb-4">
+                            <i class="far fa-dot-circle text-primary position-absolute" style="top: 2px; left: -32px;"></i>
+                            <h5 class="font-weight-bold mb-1">Diploma</h5>
+                            <p class="mb-2"><strong>State Board of Technical Education and Training</strong> | <small>2017-2020</small></p>
+                            <p>Completed a Diploma in Mechanical Engineering from Govt. Polytechnic College, Masabtank.</p>
+                        </div>
+                        <div class="position-relative mb-4">
+                            <i class="far fa-dot-circle text-primary position-absolute" style="top: 2px; left: -32px;"></i>
+                            <h5 class="font-weight-bold mb-1">SSC</h5>
+                            <p class="mb-2"><strong>Board of Secondary Education, Telangana</strong> | <small>2016-2017</small></p>
+                            <p>Completed SSC at Sri Nannapaneni Mohan Zilla Parishad High School.</p>
+                        </div>
+                        <div class="position-relative mb-4">
+                            <i class="far fa-dot-circle text-primary position-absolute" style="top: 2px; left: -32px;"></i>
+                            <h5 class="font-weight-bold mb-1">Full Stack Java Development</h5>
+                            <p class="mb-2"><strong>QEDGE Technologies, Ameerpet, Hyderabad</strong> | <small>Sep 2023 – Feb 2024</small></p>
+                            <p>Learned Full Stack Java development, gaining hands-on experience in Java, Spring Boot, front-end technologies, and database integration.</p>
+                        </div>
+                        <div class="position-relative mb-4">
+                            <i class="far fa-dot-circle text-primary position-absolute" style="top: 2px; left: -32px;"></i>
+                            <h5 class="font-weight-bold mb-1">Programming in Java</h5>
+                            <p class="mb-2"><strong>NPTEL, IIT Kharagpur</strong> | <small>Jan 2024 – Apr 2024</small></p>
+                            <p>Completed an online course on "Programming in Java" with Elite certification. The course provided in-depth understanding of Java fundamentals and advanced concepts.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                
+                <div class="col-lg-6">
+                    <h3 class="mb-4">My Experience</h3>
+                    <div class="border-left border-primary pt-2 pl-4 ml-2">
+                        <!-- Software Engineer Role -->
+                        <div class="position-relative mb-4">
+                            <i class="far fa-dot-circle text-primary position-absolute" style="top: 2px; left: -32px;"></i>
+                            <h5 class="font-weight-bold mb-1">Software Engineer</h5>
+                            <p class="mb-2"><strong>Adroitec Engineering Solutions Pvt. Ltd.</strong> | <small>July 2024 - Present</small></p>
+                            <p>As a Software Engineer at Adroitec, I have been involved in developing scalable applications using Java and cloud technologies. I work closely with cross-functional teams to create efficient solutions and maintain existing systems. My role includes ensuring system performance, performing bug fixes, and contributing to both backend and frontend tasks.</p>
+                        </div>
+                
+                        <!-- Freelancer Role -->
+                        <div class="position-relative mb-4">
+                            <i class="far fa-dot-circle text-primary position-absolute" style="top: 2px; left: -32px;"></i>
+                            <h5 class="font-weight-bold mb-1">Freelancer</h5>
+                            <p class="mb-2"><strong>Freelancing</strong> | <small>June 2024 - July 2024</small></p>
+                            <p>As a Freelancer, I worked on a variety of projects, focusing primarily on backend development using Java, PHP, and AWS. One of the key projects involved creating an automated Gmail email retrieval system using the Gmail API, AWS Lambda, and S3 for data storage. I also assisted clients with API integration and building custom web solutions.</p>
+                        </div>
+                
+                        <!-- Web Developer Intern Role -->
+                        <div class="position-relative mb-4">
+                            <i class="far fa-dot-circle text-primary position-absolute" style="top: 2px; left: -32px;"></i>
+                            <h5 class="font-weight-bold mb-1">Web Developer Intern</h5>
+                            <p class="mb-2"><strong>Webzyte</strong> | <small>Sep 2023 - June 2024</small></p>
+                            <p>During my internship at Webzyte, I was responsible for developing and maintaining small websites using PHP and JavaScript. I worked on backend functionality, ensuring data storage and retrieval were efficient. I also collaborated with the design team to improve the user interface and ensure the overall quality of the websites, leading to 100% client satisfaction.</p>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+    <!-- Qualification End -->
+
+
+    <!-- Skill Start -->
+    <div class="container-fluid py-5" id="skill">
+        <div class="container">
+            <div class="position-relative d-flex align-items-center justify-content-center mb-5">
+                <h1 class="display-1 text-uppercase text-white" style="-webkit-text-stroke: 1px #dee2e6;">Skills</h1>
+                <h1 class="position-absolute text-uppercase text-primary">My Skills</h1>
+            </div>
+            <div class="row text-center">
+                <!-- HTML -->
+                <div class="col-md-4 mb-4">
+                    <div class="icon-container">
+                        <i class="fab fa-html5 fa-5x text-primary"></i>
+                        <h6 class="mt-3">HTML</h6>
+                    </div>
+                </div>
+                <!-- CSS -->
+                <div class="col-md-4 mb-4">
+                    <div class="icon-container">
+                        <i class="fab fa-css3-alt fa-5x text-warning"></i>
+                        <h6 class="mt-3">CSS</h6>
+                    </div>
+                </div>
+                <!-- PHP -->
+                <div class="col-md-4 mb-4">
+                    <div class="icon-container">
+                        <i class="fab fa-php fa-5x text-danger"></i>
+                        <h6 class="mt-3">PHP</h6>
+                    </div>
+                </div>
+            </div>
+            <div class="row text-center">
+                <!-- JavaScript -->
+                <div class="col-md-4 mb-4">
+                    <div class="icon-container">
+                        <i class="fab fa-js-square fa-5x text-warning"></i>
+                        <h6 class="mt-3">JavaScript</h6>
+                    </div>
+                </div>
+                <!-- ReactJS -->
+                <div class="col-md-4 mb-4">
+                    <div class="icon-container">
+                        <i class="fab fa-react fa-5x text-info"></i>
+                        <h6 class="mt-3">ReactJS</h6>
+                    </div>
+                </div>
+                <!-- AngularJS -->
+                <div class="col-md-4 mb-4">
+                    <div class="icon-container">
+                        <i class="fab fa-angular fa-5x text-danger"></i>
+                        <h6 class="mt-3">AngularJS</h6>
+                    </div>
+                </div>
+            </div>
+            <div class="row text-center">
+                <!-- Java -->
+                <div class="col-md-4 mb-4">
+                    <div class="icon-container">
+                        <i class="fab fa-java fa-5x text-dark"></i>
+                        <h6 class="mt-3">Java</h6>
+                    </div>
+                </div>
+                <!-- Spring Boot -->
+                <div class="col-md-4 mb-4">
+                    <div class="icon-container">
+                        <i class="fas fa-cogs fa-5x text-success"></i>
+                        <h6 class="mt-3">Spring Boot</h6>
+                    </div>
+                </div>
+                <!-- Python -->
+                <div class="col-md-4 mb-4">
+                    <div class="icon-container">
+                        <i class="fab fa-python fa-5x text-success"></i>
+                        <h6 class="mt-3">Python</h6>
+                    </div>
+                </div>
+            </div>
+            <div class="row text-center">
+                <!-- MySQL -->
+                <div class="col-md-4 mb-4">
+                    <div class="icon-container">
+                        <i class="fas fa-database fa-5x text-dark"></i>
+                        <h6 class="mt-3">MySQL</h6>
+                    </div>
+                </div>
+                <!-- AWS Lambda -->
+                <div class="col-md-4 mb-4">
+                    <div class="icon-container">
+                        <i class="fab fa-aws fa-5x text-warning"></i>
+                        <h6 class="mt-3">AWS Lambda</h6>
+                    </div>
+                </div>
+                <!-- Git -->
+                <div class="col-md-4 mb-4">
+                    <div class="icon-container">
+                        <i class="fab fa-git-alt fa-5x text-dark"></i>
+                        <h6 class="mt-3">Git</h6>
+                    </div>
+                </div>
+            </div>
+            <div class="row text-center">
+                <!-- VB.NET -->
+                <div class="col-md-4 mb-4">
+                    <div class="icon-container">
+                        <i class="fas fa-code fa-5x text-info"></i>
+                        <h6 class="mt-3">VB.NET</h6>
+                    </div>
+                </div>
+                <!-- cPanel -->
+                <div class="col-md-4 mb-4">
+                    <div class="icon-container">
+                        <i class="fas fa-cogs fa-5x text-primary"></i>
+                        <h6 class="mt-3">cPanel</h6>
+                    </div>
+                </div>
+                <!-- API Integration -->
+                <div class="col-md-4 mb-4">
+                    <div class="icon-container">
+                        <i class="fas fa-plug fa-5x text-info"></i>
+                        <h6 class="mt-3">API Integration</h6>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Skill End -->
+
+
+    <!-- Services Start -->
+    <div class="container-fluid pt-5" id="service">
+        <div class="container">
+            <div class="position-relative d-flex align-items-center justify-content-center mb-5">
+                <h1 class="display-1 text-uppercase text-white" style="-webkit-text-stroke: 1px #dee2e6;">Services</h1>
+                <h1 class="position-absolute text-uppercase text-primary">My Services</h1>
+            </div>
+            <div class="row pb-3">
+                <!-- Web Development -->
+                <div class="col-lg-4 col-md-6 text-center mb-5">
+                    <div class="d-flex align-items-center justify-content-center mb-4">
+                        <i class="fa fa-2x fa-laptop-code service-icon bg-primary text-white mr-3"></i>
+                        <h4 class="font-weight-bold m-0">Web Development</h4>
+                    </div>
+                    <p>Providing fully customized and scalable web solutions. From front-end development using ReactJS to backend services with Java, PHP, and Python, I deliver seamless and dynamic websites tailored to your business needs.</p>
+                </div>
+    
+                <!-- Automation Solutions -->
+                <div class="col-lg-4 col-md-6 text-center mb-5">
+                    <div class="d-flex align-items-center justify-content-center mb-4">
+                        <i class="fa fa-2x fa-cogs service-icon bg-primary text-white mr-3"></i>
+                        <h4 class="font-weight-bold m-0">Automation Solutions</h4>
+                    </div>
+                    <p>I specialize in automating repetitive tasks and workflows, improving efficiency. Whether it’s building automated email retrieval systems with Java or custom automation using Python, I streamline processes to save time and effort.</p>
+                </div>
+    
+                <!-- Database Design & Management -->
+                <div class="col-lg-4 col-md-6 text-center mb-5">
+                    <div class="d-flex align-items-center justify-content-center mb-4">
+                        <i class="fa fa-2x fa-database service-icon bg-primary text-white mr-3"></i>
+                        <h4 class="font-weight-bold m-0">Database Design & Management</h4>
+                    </div>
+                    <p>Designing and managing databases for efficient data storage and retrieval. I work with MySQL, Oracle SQL, and other database technologies to ensure your systems are fast, secure, and scalable.</p>
+                </div>
+            </div>
+    
+            <div class="row pb-3">
+                <!-- R&D & Custom Solutions -->
+                <div class="col-lg-4 col-md-6 text-center mb-5">
+                    <div class="d-flex align-items-center justify-content-center mb-4">
+                        <i class="fa fa-2x fa-lightbulb service-icon bg-primary text-white mr-3"></i>
+                        <h4 class="font-weight-bold m-0">Research & Development</h4>
+                    </div>
+                    <p>I thrive in the R&D space, where I research and build custom solutions for your unique business requirements. Whether exploring new technologies or improving existing systems, I bring innovative solutions to the table.</p>
+                </div>
+    
+                <!-- Full-Stack Development -->
+                <div class="col-lg-4 col-md-6 text-center mb-5">
+                    <div class="d-flex align-items-center justify-content-center mb-4">
+                        <i class="fa fa-2x fa-code service-icon bg-primary text-white mr-3"></i>
+                        <h4 class="font-weight-bold m-0">Full-Stack Development</h4>
+                    </div>
+                    <p>End-to-end web development, from front-end ReactJS development to back-end with Java, Spring Boot, and PHP. I create fully integrated applications that handle everything from UI to server-side logic.</p>
+                </div>
+    
+                <!-- Cloud Solutions (AWS) -->
+                <div class="col-lg-4 col-md-6 text-center mb-5">
+                    <div class="d-flex align-items-center justify-content-center mb-4">
+                        <i class="fab fa-2x fa-aws service-icon bg-primary text-white mr-3"></i>
+                        <h4 class="font-weight-bold m-0">Cloud Solutions (AWS)</h4>
+                    </div>
+                    <p>Leverage AWS services like Lambda, S3, and IAM roles to scale your applications and streamline cloud-based workflows. I ensure your infrastructure is secure, efficient, and fully optimized for the cloud.</p>
+                </div>
+            </div>
+    
+            <div class="row pb-3">
+                <!-- WPF Application Development (VB.NET) -->
+                <div class="col-lg-4 col-md-6 text-center mb-5">
+                    <div class="d-flex align-items-center justify-content-center mb-4">
+                        <i class="fa fa-2x fa-desktop service-icon bg-primary text-white mr-3"></i>
+                        <h4 class="font-weight-bold m-0">WPF Application Development</h4>
+                    </div>
+                    <p>Specializing in building desktop applications using WPF and VB.NET. From UI/UX design with Figma to backend integration, I deliver clean, efficient, and user-friendly desktop solutions that meet your needs.</p>
+                </div>
+    
+                <!-- Figma Wireframing & Prototyping -->
+                <div class="col-lg-4 col-md-6 text-center mb-5">
+                    <div class="d-flex align-items-center justify-content-center mb-4">
+                        <i class="fab fa-2x fa-figma service-icon bg-primary text-white mr-3"></i>
+                        <h4 class="font-weight-bold m-0">Figma Wireframing & Prototyping</h4>
+                    </div>
+                    <p>Using Figma, I design wireframes and prototypes that visualize your application before development. This helps in quick iterations, design testing, and collaboration with clients to ensure the product aligns with expectations.</p>
+                </div>
+    
+                <!-- Custom Development & Problem Solving -->
+                <div class="col-lg-4 col-md-6 text-center mb-5">
+                    <div class="d-flex align-items-center justify-content-center mb-4">
+                        <i class="fa fa-2x fa-tools service-icon bg-primary text-white mr-3"></i>
+                        <h4 class="font-weight-bold m-0">Custom Development</h4>
+                    </div>
+                    <p>From niche requirements to solving complex problems, I provide custom development services that bring your ideas to life. Whether you need a new app, website, or integration, I build solutions that are tailored to you.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    
+    <!-- Services End -->
+
+
+    <!-- Portfolio Start -->
+    <div class="container-fluid pt-5 pb-3" id="portfolio">
+        <div class="container">
+            <div class="position-relative d-flex align-items-center justify-content-center">
+                <h1 class="display-1 text-uppercase text-white" style="-webkit-text-stroke: 1px #dee2e6;">Repositories</h1>
+                <h1 class="position-absolute text-uppercase text-primary">My GitHub Projects</h1>
+            </div>
+            <div class="row">
+                <div class="col-12 text-center mb-2">
+                    <ul class="list-inline mb-4" id="portfolio-flters">
+                        <li class="btn btn-sm btn-outline-primary m-1 active" data-filter="*">All</li>
+                        <li class="btn btn-sm btn-outline-primary m-1" data-filter=".first">Design</li>
+                        <li class="btn btn-sm btn-outline-primary m-1" data-filter=".second">Development</li>
+                        <li class="btn btn-sm btn-outline-primary m-1" data-filter=".third">Marketing</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row portfolio-container">
+                <!-- GitHub Project 1 -->
+               
+    
+                <!-- GitHub Project 2 -->
+                <div class="col-lg-4 col-md-6 mb-4 portfolio-item second">
+                    <div class="position-relative overflow-hidden mb-2">
+                        <h3><a href="https://github.com/pavankumarkoda/weather" target="_blank">Weather</a></h3>
+                        <p>A weather app that provides real-time weather information based on your location or searched city.</p>
+                    </div>
+                </div>
+    
+                <!-- GitHub Project 3 -->
+                <div class="col-lg-4 col-md-6 mb-4 portfolio-item third">
+                    <div class="position-relative overflow-hidden mb-2">
+                        <h3><a href="https://github.com/pavankumarkoda/TUFTask" target="_blank">TUFTask</a></h3>
+                        <p>A task management tool designed to help you stay organized and focused on your goals.</p>
+                    </div>
+                </div>
+    
+                <!-- GitHub Project 4 -->
+                <div class="col-lg-4 col-md-6 mb-4 portfolio-item first">
+                    <div class="position-relative overflow-hidden mb-2">
+                        <h3><a href="https://github.com/pavankumarkoda/Temperature-Converter" target="_blank">Temperature Converter</a></h3>
+                        <p>A simple app that converts temperatures between Celsius, Fahrenheit, and Kelvin.</p>
+                    </div>
+                </div>
+    
+                <!-- GitHub Project 5 -->
+                <div class="col-lg-4 col-md-6 mb-4 portfolio-item second">
+                    <div class="position-relative overflow-hidden mb-2">
+                        <h3><a href="https://github.com/pavankumarkoda/calculator" target="_blank">Calculator</a></h3>
+                        <p>A basic yet functional calculator app for performing arithmetic calculations.</p>
+                    </div>
+                </div>
+    
+                <!-- GitHub Project 6 -->
+                <div class="col-lg-4 col-md-6 mb-4 portfolio-item third">
+                    <div class="position-relative overflow-hidden mb-2">
+                        <h3><a href="https://github.com/pavankumarkoda/bharat" target="_blank">Bharat</a></h3>
+                        <p>A project to showcase the rich culture and heritage of India with interactive features.</p>
+                    </div>
+                </div>
+    
+               
+    
+                <!-- GitHub Project 8 -->
+                <div class="col-lg-4 col-md-6 mb-4 portfolio-item second">
+                    <div class="position-relative overflow-hidden mb-2">
+                        <h3><a href="https://github.com/pavankumarkoda/Dice-Game" target="_blank">Dice Game</a></h3>
+                        <p>A fun dice game application where players can roll a dice and get random results.</p>
+                    </div>
+                </div>
+    
+                <!-- GitHub Project 9 -->
+                <div class="col-lg-4 col-md-6 mb-4 portfolio-item third">
+                    <div class="position-relative overflow-hidden mb-2">
+                        <h3><a href="https://github.com/pavankumarkoda/Counter" target="_blank">Counter</a></h3>
+                        <p>A simple counter app to increment or decrement a number with each button click.</p>
+                    </div>
+                </div>
+    
+                <!-- GitHub Project 10 -->
+                <div class="col-lg-4 col-md-6 mb-4 portfolio-item first">
+                    <div class="position-relative overflow-hidden mb-2">
+                        <h3><a href="https://github.com/pavankumarkoda/java_gmail_project" target="_blank">Java Gmail Project</a></h3>
+                        <p>A project that simulates sending and receiving emails using Java for backend communication.</p>
+                    </div>
+                </div>
+    
+                <!-- GitHub Project 11 -->
+                <div class="col-lg-4 col-md-6 mb-4 portfolio-item second">
+                    <div class="position-relative overflow-hidden mb-2">
+                        <h3><a href="https://github.com/pavankumarkoda/rock-paper-sessor-game" target="_blank">Rock Paper Scissors</a></h3>
+                        <p>A classic rock-paper-scissors game with an interactive user interface.</p>
+                    </div>
+                </div>
+    
+                <!-- GitHub Project 12 -->
+                <div class="col-lg-4 col-md-6 mb-4 portfolio-item third">
+                    <div class="position-relative overflow-hidden mb-2">
+                        <h3><a href="https://github.com/pavankumarkoda/stopWatch" target="_blank">Stopwatch</a></h3>
+                        <p>A simple stopwatch app with start, stop, and reset functionality.</p>
+                    </div>
+                </div>
+    
+                <!-- GitHub Project 13 -->
+                <div class="col-lg-4 col-md-6 mb-4 portfolio-item first">
+                    <div class="position-relative overflow-hidden mb-2">
+                        <h3><a href="https://github.com/pavankumarkoda/clock" target="_blank">Clock</a></h3>
+                        <p>A digital clock app that shows the current time in hours, minutes, and seconds.</p>
+                    </div>
+                </div>
+    
+                <!-- GitHub Project 14 -->
+                <div class="col-lg-4 col-md-6 mb-4 portfolio-item second">
+                    <div class="position-relative overflow-hidden mb-2">
+                        <h3><a href="https://github.com/pavankumarkoda/imageToCaptions" target="_blank">Image to Captions</a></h3>
+                        <p>An app that generates captions for images using AI-based image processing algorithms.</p>
+                    </div>
+                </div>
+    
+                <!-- GitHub Project 15 -->
+                <div class="col-lg-4 col-md-6 mb-4 portfolio-item third">
+                    <div class="position-relative overflow-hidden mb-2">
+                        <h3><a href="https://github.com/pavankumarkoda/bestproposal" target="_blank">Best Proposal</a></h3>
+                        <p>A proposal app designed to help generate professional proposals with ease.</p>
+                    </div>
+                </div>
+    
+                <!-- GitHub Project 16 -->
+                <div class="col-lg-4 col-md-6 mb-4 portfolio-item first">
+                    <div class="position-relative overflow-hidden mb-2">
+                        <h3><a href="https://github.com/pavankumarkoda/app" target="_blank">App</a></h3>
+                        <p>A basic app for demonstrating mobile development concepts.</p>
+                    </div>
+                </div>
+    
+                <!-- GitHub Project 17 -->
+                <div class="col-lg-4 col-md-6 mb-4 portfolio-item second">
+                    <div class="position-relative overflow-hidden mb-2">
+                        <h3><a href="https://github.com/pavankumarkoda/design" target="_blank">Design</a></h3>
+                        <p>A project showcasing design patterns and principles in software development.</p>
+                    </div>
+                </div>
+    
+                <!-- GitHub Project 18 -->
+                <div class="col-lg-4 col-md-6 mb-4 portfolio-item third">
+                    <div class="position-relative overflow-hidden mb-2">
+                        <h3><a href="https://github.com/pavankumarkoda/gmailProject" target="_blank">Gmail Project</a></h3>
+                        <p>An email system simulation project that mimics Gmail's core functionalities.</p>
+                    </div>
+                </div>
+    
+                <!-- GitHub Project 19 -->
+                <div class="col-lg-4 col-md-6 mb-4 portfolio-item first">
+                    <div class="position-relative overflow-hidden mb-2">
+                        <h3><a href="https://github.com/pavankumarkoda/E-commerce" target="_blank">E-commerce</a></h3>
+                        <p>An e-commerce platform to demonstrate how to create online shopping experiences.</p>
+                    </div>
+                </div>
+    
+                <!-- GitHub Project 20 -->
+                <div class="col-lg-4 col-md-6 mb-4 portfolio-item second">
+                    <div class="position-relative overflow-hidden mb-2">
+                        <h3><a href="https://github.com/pavankumarkoda/BAOIAM" target="_blank">BAOIAM</a></h3>
+                        <p>A project demonstrating artificial intelligence concepts in the field of machine learning.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Portfolio End -->
+
+
+  
+
+
+    <!-- Contact Start -->
+    <div class="container-fluid py-5" id="contact">
+        <div class="container">
+            <div class="position-relative d-flex align-items-center justify-content-center">
+                <h1 class="display-1 text-uppercase text-white" style="-webkit-text-stroke: 1px #dee2e6;">Contact</h1>
+                <h1 class="position-absolute text-uppercase text-primary">Contact Me</h1>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="contact-form text-center">
+                        <div id="success"></div>
+                        <form name="sentMessage" id="contactForm" novalidate="novalidate">
+                            <div class="form-row">
+                                <div class="control-group col-sm-6">
+                                    <input type="text" class="form-control p-4" id="name" name="name" placeholder="Your Name" required="required" data-validation-required-message="Please enter your name" />
+                                    <p class="help-block text-danger"></p>
+                                </div>
+                                <div class="control-group col-sm-6">
+                                    <input type="email" class="form-control p-4" id="email" name="email" placeholder="Your Email" required="required" data-validation-required-message="Please enter your email" />
+                                    <p class="help-block text-danger"></p>
+                                </div>
+                            </div>
+                            <div class="control-group">
+                                <input type="text" class="form-control p-4" id="subject" name="subject" placeholder="Subject" required="required" data-validation-required-message="Please enter a subject" />
+                                <p class="help-block text-danger"></p>
+                            </div>
+                            <div class="control-group">
+                                <textarea class="form-control py-3 px-4" rows="5" id="message" name="message" placeholder="Message" required="required" data-validation-required-message="Please enter your message"></textarea>
+                                <p class="help-block text-danger"></p>
+                            </div>
+                            <div>
+                                <button class="btn btn-outline-primary" type="submit" id="sendMessageButton">Send Message</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Contact End -->
+
+
+    <!-- Footer Start -->
+    <div class="container-fluid bg-primary text-white mt-5 py-5 px-sm-3 px-md-5">
+        <div class="container text-center py-5">
+            <div class="d-flex justify-content-center mb-4">
+                <a class="btn btn-light btn-social mr-2" target="_blank" href="https://x.com/thePAVANKoda"><i class="fab fa-twitter"></i></a>
+                <!-- <a class="btn btn-light btn-social mr-2" target="_blank" href="#"><i class="fab fa-facebook-f"></i></a> -->
+                <a class="btn btn-light btn-social mr-2" target="_blank" href="https://www.linkedin.com/in/pavankoda/"><i class="fab fa-linkedin-in"></i></a>
+                <a class="btn btn-light btn-social"target="_blank" href="https://www.instagram.com/pavankoda/"><i class="fab fa-instagram"></i></a>
+            </div>
+            <p class="m-0">&copy;  All Rights Reserved. Designed by Pavan Koda</a>
+            </p>
+        </div>
+    </div>
+    <!-- Footer End -->
+
+    <!-- Scroll to Bottom -->
+    <i class="fa fa-2x fa-angle-down text-white scroll-to-bottom"></i>
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-outline-dark px-0 back-to-top"><i class="fa fa-angle-double-up"></i></a>
+
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/typed/typed.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="lib/isotope/isotope.pkgd.min.js"></script>
+    <script src="lib/lightbox/js/lightbox.min.js"></script>
+
+    <!-- Contact Javascript File -->
+    <script src="mail/jqBootstrapValidation.min.js"></script>
+    <script src="mail/contact.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+</body>
+
+</html>thics
