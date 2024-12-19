@@ -39,13 +39,10 @@
 .content {
     padding: 20px;
 }
-
-/* Floating icons container */
 .floating-icons {
     position: fixed;
     right: 20px;
     top: 50%;
-    
     display: flex;
     flex-direction: column;
     gap: 10px;
@@ -53,57 +50,45 @@
 }
 
 /* Style for each icon */
+.icon {
+    display: flex; /* Makes the entire container clickable */
+    justify-content: center; /* Centers the icon */
+    align-items: center;
+    width: 50px; /* Set a uniform size for the clickable area */
+    height: 50px;
+    border-radius: 50%;
+    background-color: transparent; /* Add a background if desired */
+    transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
+    cursor: pointer;
+    text-decoration: none; /* Remove underline for links */
+}
+
+/* Icon image inside the clickable area */
 .icon img {
     width: 40px;
     height: 40px;
     border-radius: 50%;
-    transition: transform 0.3s ease-in-out;
 }
 
-/* Hover effect to enlarge the icons */
-.icon:hover img {
+/* Hover effect for the container */
+.icon:hover {
     transform: scale(1.1);
+    background-color: rgba(0, 0, 0, 0.1); /* Optional background change on hover */
 }
 
-/* Optional: Style for links (no text decoration) */
-.icon {
-    display: inline-block;
-    text-decoration: none;
-}
-.content {
-    padding: 20px;
-    width: 100%; /* Optional: Adjust content width */
-    margin: 0 auto; /* Center the content on the page */
-}
-
-/* Justify the paragraph text */
-p {
-    text-align: justify; /* Align text to both left and right */
-}
+/* Optional: Media queries for smaller screens */
 @media (max-width: 768px) {
-    .social-icon {
-        font-size: 25px;
-    }
-    .body{
-        width: 200px;
-    }
     .floating-icons {
-        position: fixed;
-        left: 20px;
-     
+        left: 20px; /* Move to the left on smaller screens */
     }
 }
 
 @media (max-width: 480px) {
-    .social-icon {
-        font-size: 20px;
-    }
     .floating-icons {
-        position: fixed;
-        left: 20px;
-     
+        left: 10px; /* Further adjust positioning for smaller screens */
     }
 }
+
     </style>
 </head>
 
@@ -138,7 +123,7 @@ p {
     <!-- Navbar End -->
 
     <div class="floating-icons">
-        <a href="https://www.linkedin.com/pavankoda" target="_blank" class="icon">
+        <a href="https://www.linkedin.com/in/pavankoda/" target="_blank" class="icon">
             <img src="images/linkedin.png" alt="LinkedIn" />
         </a>
         <a href="https://github.com/pavankumarkoda" target="_blank" class="icon">
